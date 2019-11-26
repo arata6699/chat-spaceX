@@ -49,7 +49,6 @@ $(function() {
 var reloadMessages = function () {
   //今いるページのリンクが/groups/グループID/messagesのパスとマッチすれば以下を実行。
     var last_message_id = $('.message:last').data("message-id"); 
-    console.log(last_message_id)
     //dataメソッドで.messageにある:last最後のカスタムデータ属性を取得しlast_message_idに代入。
     if (window.location.href.match(/\/groups\/\d+\/messages/))
     $.ajax({ //ajax通信で以下のことを行う
@@ -72,7 +71,7 @@ var reloadMessages = function () {
   
     
 }
-setInterval(reloadMessages, 7000);
+setInterval(reloadMessages, 5000);
 });
 
 
